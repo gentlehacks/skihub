@@ -13,9 +13,54 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "SkiHub - Your Ultimate Skill Resources Hub",
-  description: "Discover, learn, and master new skills with curated resources at SkiHub.",
+export const metadata = {
+  title: "SkiHub - Free Tech Skills & Career Learning Paths for Nigerians",
+  description:
+    "Master in-demand tech skills for free. Curated learning paths in Web Development, Cybersecurity, Data Science, and more with Nigerian-friendly resources.",
+  keywords:
+    "free tech courses Nigeria, learn coding Nigeria, cybersecurity training Lagos, web development tutorial Abuja, data science course Nigeria, digital skills Africa",
+  authors: [{ name: "SkiHub Team" }],
+  openGraph: {
+    title: "SkiHub - Learn Tech Skills for Free | Nigerian Learners",
+    description:
+      "Curated learning paths with free resources for Nigerians to master web dev, cybersecurity, data science and get tech jobs.",
+    url: "https://skihubs.vercel.app",
+    siteName: "SkiHub",
+    images: [
+      {
+        url: "/og-image.png", // Create a 1200x630px OG image
+        width: 1200,
+        height: 630,
+        alt: "SkiHub Learning Platform",
+      },
+    ],
+    locale: "en_NG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SkiHub - Free Tech Skills for Nigerian Learners",
+    description:
+      "Master web development, cybersecurity, data science with curated Nigerian-friendly resources.",
+    images: ["/twitter-image.png"], // 1200x600px
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code", // Get from Google Search Console
+  },
+  alternates: {
+    canonical: "https://skihubs.vercel.app",
+  },
 };
 
 export default function RootLayout({
