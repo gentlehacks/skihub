@@ -24,18 +24,18 @@ const HeroSection = () => {
           Browse curated learning path from the best free Nigerian friendly
           tutorials. No account required to start learning
         </p>
-        <div className="flex flex-row items-center justify-center gap-4 mt-12">
+        <div className="flex flex-row items-center justify-center gap-2 md:gap-4 mt-12">
           <Link
             href="/paths"
             className="no-underline"
           >
-          <button className="bg-blue-500 text-white font-bold py-2 px-6 rounded-2xl hover:bg-blue-600 transition duration-300">
+          <button className="bg-blue-500 text-white font-bold py-2 px-4 md:px-6 rounded-2xl hover:bg-blue-600 transition duration-300">
             Browse path
             <FaArrowRight className="inline-block ml-2" />
           </button>
           </Link>
           <div className="px-4 py-3 flex flex-row items-center text-gray-400">
-            <FaRegCheckCircle className="inline-block text-blue-400 mr-2" />
+            <FaRegCheckCircle className="inline-block text-blue-400 mr-1 md:mr-2" />
             <p>No sign up needed</p>
           </div>
         </div>
