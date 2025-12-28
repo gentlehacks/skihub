@@ -57,7 +57,8 @@ export const metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code", // Get from Google Search Console
+    google:
+      "google-site-verification=R_L77nwXEX9qEpa2jGPngD9ngPwTnFqs-yBTvHEBNP8",
   },
   alternates: {
     canonical: "https://skihubs.vercel.app",
@@ -72,6 +73,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <meta
+          name="google-site-verification"
+          content="google-site-verification=R_L77nwXEX9qEpa2jGPngD9ngPwTnFqs-yBTvHEBNP8"
+        />
         <link rel="icon" href="/favicon.png" type="image/png" />
       </Head>
       <body
