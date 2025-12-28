@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
 import { Analytics } from "@vercel/analytics/next";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +29,7 @@ export const metadata = {
     siteName: "SkiHub",
     images: [
       {
-        url: "/og-image.png", // Create a 1200x630px OG image
+        url: "/favicon.png", // Create a 1200x630px OG image
         width: 1200,
         height: 630,
         alt: "SkiHub Learning Platform",
@@ -43,7 +43,7 @@ export const metadata = {
     title: "SkiHub - Free Tech Skills for Nigerian Learners",
     description:
       "Master web development, cybersecurity, data science with curated Nigerian-friendly resources.",
-    images: ["/twitter-image.png"], // 1200x600px
+    images: ["/favicon.png"], // 1200x600px
   },
   robots: {
     index: true,
@@ -71,6 +71,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
