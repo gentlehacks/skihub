@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,9 +55,6 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "iXKDqhLlkVrxp_4dbfUeTdSAFQ_WU6PXRmLXPot1IR0",
-  },
   alternates: {
     canonical: "https://skihubs.vercel.app",
   },
@@ -69,6 +67,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
